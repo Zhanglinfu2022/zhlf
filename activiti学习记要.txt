@@ -1,0 +1,48 @@
+activiti 整个流程
+
+1、部署activiti，引入activiti所需要的Jar包
+2、流程定义(创建bpmn流程定义文件)
+3、流程定义的部署(把bpmn流程部署到数据库中)
+4、启动流程实例
+5、处理待办任务
+6、流程结束
+
+activiti7.0 的开发环境
+
+mysql安装包的使用
+
+1、mysqld的初始化 mysqld --initialize --console
+2、mysqld的install
+3、net start mysql
+4、mysql -h localhost -uroot -p
+   输入密码：
+5、初始化登录密码
+   alter user user() identified by '123456';
+6、exit退出,重新登陆
+
+mysql安装包忘记密码,重置密码的操作
+
+1、mysqld --skip--grant-tables --shared-memory --console 以内存的方式登陆
+2、开启新的的DOS窗口
+3、设置skip-grant-tables模式下的读写属性
+4、set global read_only=0(可读写)
+5、flush privillegs;
+5、修改密码 alter user 'root'@'localhost' identified by 'root';
+6、退出，启动服务net start mysql
+
+github 推送个人仓库
+
+github 推送用token (90天)
+github 账号和密码
+username: zhanglinfu2012
+token: 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 (可以手动设置)
+
+activiti 的依赖机构类
+ProcessEngineConfigurea
+	-- ProecessEngine
+		-- RepositoryService
+		-- RunTimeService
+		-- TaskService
+		-- HistoryService
+		-- ManagerService
+
